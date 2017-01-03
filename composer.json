@@ -1,0 +1,13 @@
+{
+    "name": "pspmedia/thuyhangwood",
+    "require": {
+        "phpmailer/phpmailer": "^5.2",
+        "eventviva/php-image-resize": "^1.5"
+    },
+    "authors": [
+        {
+            "name": "PSP Media",
+            "email": "info@pspmedia.com"
+        }
+    ]
+}

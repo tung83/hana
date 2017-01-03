@@ -1,0 +1,42 @@
+{
+  "name": "pushy-reloaded",
+  "version": "0.9.7",
+  "homepage": "https://github.com/julianxhokaxhiu/pushy-reloaded",
+  "authors": [
+    "christophery <@cmyee>",
+    "Julian Xhokaxhiu <@julianxhokaxhiu>"
+  ],
+  "description": "Pushy is a responsive off-canvas navigation menu using CSS transforms & transitions.",
+  "main": [
+    "js/pushy.js",
+    "css/pushy.css"
+  ],
+  "keywords": [
+    "jquery",
+    "offcanvas",
+    "menu",
+    "responsive"
+  ],
+  "license": "MIT",
+  "private": true,
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "devDependencies": {
+    "bootstrap-sass-official": "*"
+  },
+  "_release": "0.9.7",
+  "_resolution": {
+    "type": "version",
+    "tag": "0.9.7",
+    "commit": "50005b29517da78d66f6aa0ba2e5a3a2fe805c6c"
+  },
+  "_source": "git://github.com/julianxhokaxhiu/pushy.git",
+  "_target": "~0.9.7",
+  "_originalSource": "pushy-reloaded",
+  "_direct": true
+}

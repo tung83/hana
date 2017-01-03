@@ -1,0 +1,38 @@
+RewriteEngine On
+
+RewriteBase /
+
+# redirect to www domain
+RewriteCond %{HTTP_HOST} ^rtech.com.vn
+RewriteRule (.*) http://www.rtech.com.vn/$1 [R=301,L]
+
+RewriteCond %{ENV:REDIRECT_STATUS} 200
+RewriteRule .* - [L]
+
+RewriteRule ^ajax/([a-zA-Z0-9-_]+)$ /ajax.php?do=$1 [QSA,L]
+RewriteRule ^cart/([a-zA-Z0-9-_]+)$ /cart.php?do=$1 [QSA,L]
+RewriteRule ^gio-hang/([a-zA-Z0-9-_]+)/?$ /index.php?view=gio-hang&act=$1 [QSA,L]
+RewriteRule ^dat-hang/([a-zA-Z0-9-_]+)/?$ /index.php?view=dat-hang&act=$1 [QSA,L]
+
+# product categories
+RewriteRule ^([a-zA-Z0-9-_]+)/c/([a-zA-Z0-9-_]+)\.([0-9]+)\.html$ /index.php?view=$1&id=$3&c=1&slug=$2 [QSA,L]
+RewriteRule ^([a-zA-Z0-9-_]+)/s/([a-zA-Z0-9-_]+)\.([0-9]+)\.html$ /index.php?view=$1&id=$3&s=1&slug=$2 [QSA,L]
+RewriteRule ^([a-zA-Z0-9-_]+)\.c([0-9]+)\.html$ /index.php?view=san-pham&id=$2&c=1&slug=$1 [QSA,L]
+RewriteRule ^([a-zA-Z0-9-_]+)\.s([0-9]+)\.html$ /index.php?view=san-pham&id=$2&s=1&slug=$1 [QSA,L]
+RewriteRule ^([a-zA-Z0-9-_]+)\.p([0-9]+)\.html$ /index.php?view=san-pham&id=$2&slug=$1 [QSA,L]
+RewriteRule ^([a-zA-Z0-9-_]+)\.pr([0-9]+)\.html$ /index.php?view=du-an&id=$2&slug=$1 [QSA,L]
+RewriteRule ^([a-zA-Z0-9-_]+)\.n([0-9]+)\.html$ /index.php?view=tin-tuc&id=$2&slug=$1 [QSA,L]
+RewriteRule ^([a-zA-Z0-9-_]+)\.w([0-9]+)\.html$ /index.php?view=the-gioi&id=$2&slug=$1 [QSA,L]
+RewriteRule ^([a-zA-Z0-9-_]+)\.r([0-9]+)\.html$ /index.php?view=tuyen-dung&id=$2&slug=$1 [QSA,L]
+RewriteRule ^([a-zA-Z0-9-_]+)\.a([0-9]+)\.html$ /index.php?view=gioi-thieu&id=$2&slug=$1 [QSA,L]
+# RewriteRule ^([a-zA-Z0-9-_]+)\.s([0-9]+)\.html$ /index.php?view=dich-vu&id=$2&slug=$1 [QSA,L]
+
+# static pages
+RewriteRule ^([a-zA-Z0-9-_]+)\.html$ /index.php?view=$1 [QSA,L]
+RewriteRule ^([a-zA-Z0-9-_]+)$ /index.php?view=$1 [QSA,L]
+
+# single page without slug
+RewriteRule ^([a-zA-Z0-9-_]+)/([0-9]+)\.html$ /index.php?view=$1&id=$2 [QSA,L]
+
+# single page with slug
+RewriteRule ^([a-zA-Z0-9-_]+)/([a-zA-Z0-9-_]+)\.([0-9]+)\.html$ /index.php?view=$1&id=$3&slug=$2 [QSA,L]

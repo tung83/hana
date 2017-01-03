@@ -1,0 +1,163 @@
+/**
+ * VARIABLES
+ */
+
+@sans: system, -apple-system, ".SFNSDisplay-Regular", 'Helvetica Neue', Arial, sans-serif;
+// @sans: Arial, sans-serif;
+@serif: 'Times New Roman', serif;
+
+/**
+ * RESET
+ */
+
+* {
+  box-sizing: border-box;
+}
+
+::-webkit-input-placeholder {
+  color: #999;
+}
+
+/* Firefox 18- */
+:-moz-placeholder {
+  color: #999;
+}
+
+/* Firefox 19+ */
+::-moz-placeholder {
+  color: #999;
+}
+
+:-ms-input-placeholder {
+  color: #999;
+}
+
+input,
+textarea,
+select {
+  outline: none;
+  font-family: inherit;
+  font-size: inherit;
+  font-weight: 300;
+  border: 0;
+  background-color: #fff;
+}
+
+input[type=search],
+input[type=text],
+textarea {
+  border-radius: 0;
+  -webkit-appearance: none;
+}
+
+button,
+input[type=submit],
+input[type=button],
+input[type=reset] {
+  border: 0;
+}
+
+select {
+  background-size: 28px;
+  background-position: 100% 50%;
+  background-repeat: no-repeat;
+  background-image: url('data:image/svg+xml;charset=utf8,%3Csvg%20viewBox%3D%220%200%2062%2017%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20xmlns%3Axlink%3D%22http%3A%2F%2Fwww.w3.org%2F1999%2Fxlink%22%3E%3Cpath%20d%3D%22M40.7%2C0.199999809%20L30.1%2C10.7999998%20L19.7%2C0.199999809%20L17%2C2.99999981%20L30.2%2C16.2999998%20L43.4%2C2.99999981%20L40.7%2C0.199999809%20L40.7%2C0.199999809%20Z%22%20fill%3D%22%23666%22%2F%3E%3C%2Fsvg%3E');
+
+  /* Hide dropdown arrow */
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  &::-ms-expand {
+    display: none;
+  }
+
+  &.input-sm {
+    background-size: 24px;
+    padding-right: 24px;
+  }
+
+  &.input-lg {
+    background-size: 32px;
+    padding-right: 32px;
+  }
+
+  &[readonly],
+  &[disabled],
+  fieldset[disabled] & {
+    background-image: url('data:image/svg+xml;charset=utf8,%3Csvg%20viewBox%3D%220%200%2062%2017%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20xmlns%3Axlink%3D%22http%3A%2F%2Fwww.w3.org%2F1999%2Fxlink%22%3E%3Cpath%20d%3D%22M40.7%2C0.199999809%20L30.1%2C10.7999998%20L19.7%2C0.199999809%20L17%2C2.99999981%20L30.2%2C16.2999998%20L43.4%2C2.99999981%20L40.7%2C0.199999809%20L40.7%2C0.199999809%20Z%22%20fill%3D%22%23BBB%22%2F%3E%3C%2Fsvg%3E');
+  }
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+  transition: all ease-in-out .1s;
+  &:focus,
+  &:hover,
+  &:active {
+    text-decoration: underline;
+    outline: 0;
+  }
+}
+
+table,
+thead,
+tbody,
+tfoot,
+tr,
+th,
+td {
+  border-collapse: collapse;
+  font-family: inherit;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  margin-top: 0;
+}
+
+
+/**
+ * HELPER
+ */
+
+.clear {
+  display: block;
+  clear: both;
+}
+
+.clearfix {
+  &:before,
+  &:after {
+    content: " "; // 1
+    display: table; // 2
+  }
+  &:after {
+    clear: both;
+  }
+}
+
+.placeholder(@color) {
+  &::-webkit-input-placeholder {
+    color: @color;
+  }
+  &:-moz-placeholder {
+    color: @color;
+  }
+  /* Firefox 18- */
+  &::-moz-placeholder {
+    color: @color;
+  }
+  /* Firefox 19+ */
+  &:-ms-input-placeholder {
+    color: @color;
+  }
+}
+
+div:focus {
+  outline: 0;
+}
+

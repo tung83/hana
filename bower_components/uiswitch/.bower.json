@@ -1,0 +1,46 @@
+{
+  "name": "uiswitch",
+  "version": "1.0.1",
+  "authors": [
+    "Christian Petersen <humanoidism@gmail.com>"
+  ],
+  "description": "A sweet and pure CSS3 iOS 7 UISwitch",
+  "main": "_uiswitch.scss",
+  "keywords": [
+    "css3",
+    "scss",
+    "sass",
+    "ios",
+    "switch",
+    "button",
+    "checkbox",
+    "ui",
+    "component"
+  ],
+  "license": "MIT",
+  "homepage": "https://github.com/fnky/css3-uiswitch",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    ".sass-cache",
+    ".DS_Store",
+    "test",
+    "tests",
+    ".gitignore",
+    "uiswitch-demo.gif",
+    "example.html",
+    "Makefile"
+  ],
+  "dependencies": {},
+  "_release": "1.0.1",
+  "_resolution": {
+    "type": "version",
+    "tag": "1.0.1",
+    "commit": "5ba7e77764256dcb65f8959151968001ee9dd91c"
+  },
+  "_source": "git://github.com/fnky/css3-uiswitch.git",
+  "_target": "~1.0.1",
+  "_originalSource": "uiswitch",
+  "_direct": true
+}
